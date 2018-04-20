@@ -107,7 +107,7 @@ def rebuild(mainapk):
 
     print pyc.Info("path: %s" % path)
 
-    signapk = "java -jar uber-apk-signer/uber-apk-signer-0.8.4.jar  %s -o %s-final.apk" % (path, mainapk[:-4])
+    signapk = "java -jar uber-apk-signer/uber-apk-signer-0.8.4.jar -a %s -o %s-final.apk" % (path, mainapk[:-4])
 
     print pyc.Info(signapk)
 
