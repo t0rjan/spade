@@ -101,7 +101,7 @@ def rebuild(mainapk):
 	os.system(rebuild)
 	print pyc.Info("Signing apk...")
 	path = "%s/dist/%s"%(mainapkname,mainapk)
-	signapk = "java -jar signapk.jar cert.x509.pem privatekey.pk8 %s %s-final.apk"%(path,mainapk[:-4])
+	signapk = "java -jar signapk.jar certificate.pem key.pk8 %s %s-final.apk"%(path,mainapk[:-4])
 	os.system(signapk)
 	print pyc.Succ("Successfully backdoored and saved as %s-final.apk"%mainapk[:-4])
 
