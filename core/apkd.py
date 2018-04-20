@@ -107,9 +107,9 @@ def rebuild(mainapk):
 
     print pyc.Info("path: %s" % path)
 
-    signapk = "java -jar uber-apk-signer/uber-apk-signer-0.8.4.jar -a %s -o %s-final.apk" % (path, mainapk[:-4])
+    signapk = "java -jar uber-apk-signer/uber-apk-signer-0.8.4.jar -a %s -o ./" % (path)
 
     print pyc.Info(signapk)
 
     os.system(signapk)
-    print pyc.Succ("Successfully backdoored and saved as %s-final.apk" % mainapk[:-4])
+    print pyc.Succ("Successfully backdoored and saved as ./")
